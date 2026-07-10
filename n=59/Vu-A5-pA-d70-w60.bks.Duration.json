@@ -28,7 +28,20 @@
         "route_durations": [85.84529213628709, 161.19135910103648, 266.0390302244758, 32.90000000000009, 78.978606892166, 53.17021505376344, 83.84762287244216, 213.34470289762328, 32.45719063545141, 178.24000000000024, 79.42167753496267, 104.09534050179212, 121.2351008733362, 94.70000000000005, 378.01773870933766, 38.601282051282055, 252.4300000000003],
         "route_departure_times": [5.440860215053763, 112.26810035842294, 359.5352380952381, 1184.05, 929.8983050847459, 0.0, 95.47523427041499, 842.4849113159661, 570.0, 1081.4099999999999, 664.747813990461, 6.860215053763443, 279.88030888030886, 1103.84, 571.9108327192338, 358.3833333333333, 1095.3999999999999],
         "legacy_declared_value": 2254.5151594839576,
-        "legacy_key": "Ari5-n=61-6edb8abf24565bc68e10513f0fe862f0205fe023.json"
+        "legacy_key": "Ari5-n=61-6edb8abf24565bc68e10513f0fe862f0205fe023.json",
+        "optimality": {
+            "proven": true,
+            "prover": "kayros lera branch-price-and-cut (HiGHS backend; branch m5.9-exact-stepwise-labeling, commit 7f5f357)",
+            "certificate": "Optimal under checker-exact route costs and standard LP/pricing tolerances. Certified by four independent solves (cold and warm starts x asymmetric and symmetric labeling modes) agreeing on the value, each with an audited exact-pricing phase and zero checker-infeasible priced columns.",
+            "date": "2026-07-10",
+            "arithmetic": "checker-exact route costs (IEEE-754 doubles, canonical route order); the proven optimum equals compute_solution_cost of the stored routes bit-exactly",
+            "proven_optimum": 2254.515159483957,
+            "dual_bound": 2254.5151594839567,
+            "wall_time_s": 5.45,
+            "time_limit_s": 3600.0,
+            "checker": "mamut-routing-lib td Duration checker",
+            "campaign": "2026-07-10 full TD re-certification on Grid'5000 (reservation 6763721 + retry 6765373)"
+        }
     },
     "objective_function": "Duration"
 }

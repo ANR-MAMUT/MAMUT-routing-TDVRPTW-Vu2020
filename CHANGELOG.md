@@ -2,6 +2,10 @@
 
 All notable changes to the curated `Vu2020` TDVRPTW best-known solutions (BKS) are recorded here. Objective: **Duration** (duration minimization — the depot departure time of each route is a decision variable). Costs are the authoritative output of the canonical checker (`mamut_routing_lib.td.check_td_solution`): exact IEEE-754 double arithmetic, no epsilon thresholds, routes in canonical order (sorted by first customer), total summed in that order — so any strict improvement is real. Reminder: this family is the VRP variant curated by Onyr (see README.md), so these BKS are not comparable with published TD-TSPTW results on the underlying raw files.
 
+## 2026-07-11
+
+**149 BKS stamped proven optimal** (`metadata.optimality`), the family's first optimality certificates. Each stamp certifies four independent exact solves (cold and warm starts x two labeling modes) agreeing on the value, an audited exact-pricing phase in every run, zero checker-infeasible priced columns, and canonical-checker re-validation at stamping time. Instances whose runs disagreed, timed out, or priced a checker-infeasible column carry NO stamp.
+
 ## 2026-07-10
 
 147 BKS improved by exact solves recorded as ordinary best-known solutions (no optimality stamps): a full re-certification campaign ran the exact solver (kayros lera branch-price-and-cut, HiGHS backend) four times per instance (cold and warm starts, two labeling modes) on Grid'5000 and only values with four-way agreement, an audited exact-pricing phase, and canonical-checker re-validation were accepted. The previous references at these sizes were heuristic (TD-ILS seeds), so improvements are broad: all three sizes covered (n=59/79/99), largest single improvement about -3.5%. Optimality stamping is handled separately from this fold.

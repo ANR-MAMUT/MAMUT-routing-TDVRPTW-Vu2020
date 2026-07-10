@@ -32,7 +32,20 @@
         "route_durations": [173.77999999999997, 45.361839128613326, 57.46356525405838, 137.11258780435242, 124.63431267527642, 156.47390054190808, 142.34000000000015, 43.96494623655914, 167.42000000000007, 6.219999999999999, 186.28549764049765, 46.191305353219946, 120.13690641264364, 106.56265923910698, 188.56020777107733, 105.18999999999983, 327.2717354166164, 25.850000000000023, 302.4560383065816, 278.2328719288304, 102.83386724386725],
         "route_departure_times": [1220.2, 30.0, 1014.2555555555556, 725.1353113553114, 942.5384615384615, 165.92, 1267.86, 4.21505376344086, 1083.24, 45.0, 110.98158730158733, 1006.6, 25.00354358610915, 4.048451872004151, 392.59196614196617, 1245.1100000000001, 345.07556069863955, 690.0, 549.5610424387601, 898.9911255411254, 6.721688311688311],
         "legacy_declared_value": 2844.3422409532095,
-        "legacy_key": "Ari5-n=101-85648c287bb58667a56dd5cdd50913b442064c2c.json"
+        "legacy_key": "Ari5-n=101-85648c287bb58667a56dd5cdd50913b442064c2c.json",
+        "optimality": {
+            "proven": true,
+            "prover": "kayros lera branch-price-and-cut (HiGHS backend; branch m5.9-exact-stepwise-labeling, commit 7f5f357)",
+            "certificate": "Optimal under checker-exact route costs and standard LP/pricing tolerances. Certified by four independent solves (cold and warm starts x asymmetric and symmetric labeling modes) agreeing on the value, each with an audited exact-pricing phase and zero checker-infeasible priced columns.",
+            "date": "2026-07-10",
+            "arithmetic": "checker-exact route costs (IEEE-754 doubles, canonical route order); the proven optimum equals compute_solution_cost of the stored routes bit-exactly",
+            "proven_optimum": 2844.3422409532086,
+            "dual_bound": 2844.3422409532086,
+            "wall_time_s": 24.68,
+            "time_limit_s": 3600.0,
+            "checker": "mamut-routing-lib td Duration checker",
+            "campaign": "2026-07-10 full TD re-certification on Grid'5000 (reservation 6763721 + retry 6765373)"
+        }
     },
     "objective_function": "Duration"
 }
