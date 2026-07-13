@@ -1,27 +1,45 @@
 {
     "instance_name": "Vu-A4-pA-d70-w100",
     "routes": [
-        [3, 32, 25, 55, 9],
-        [8, 2, 40, 15, 11, 37, 29],
-        [13, 44, 16, 45, 35, 30, 48, 58],
-        [26, 1, 23, 54, 31, 20, 27],
-        [28, 51, 50, 17, 22, 49, 57, 21, 34],
-        [39, 52, 33, 6, 4, 14, 43, 53, 41],
-        [42],
-        [47, 38, 36, 18, 10],
-        [56, 24, 7],
-        [59, 46, 19, 5, 12]
+        [5, 12, 40, 11, 15, 37, 29],
+        [8, 2],
+        [9, 58, 19],
+        [26, 1, 54],
+        [27, 20, 13, 44, 16, 45, 48],
+        [28, 7],
+        [31],
+        [33, 6, 4, 14, 43, 53, 47],
+        [35, 30, 3, 32, 25, 55],
+        [38, 36, 18, 41, 10],
+        [42, 51, 50],
+        [49, 57, 21, 34, 23],
+        [52, 39],
+        [56, 24, 22, 17],
+        [59, 46]
     ],
-    "cost": 2055.000787822143,
+    "cost": 1995.2301634176033,
     "metadata": {
-        "authors": "Florian Rascoussier (0nyr)",
-        "source": "kayros 0.4.0.dev0 TD-ILS (seed=123, time_limit=300.0s)",
+        "source": "kayros lera BPC exact solve (HiGHS backend) \u2014 four independent runs (cold/warm starts x two labeling modes) agreeing on the value, each with exact-pricing iterations audited; recorded as a best-known solution (optimality stamping is handled separately)",
         "validated_by": "mamut-routing-lib td Duration checker",
-        "date": "2026-07-08T03:23:15",
-        "route_durations": [159.8370794951055, 237.67999999999984, 300.7768309246235, 282.9981041558189, 369.8087312722467, 207.26, 52.06645161290322, 117.76999999999998, 125.62371084337347, 201.17987951807208],
-        "route_departure_times": [704.171323866239, 1069.66, 512.570995162333, 262.81024276052227, 28.27058823529412, 1235.07, 0.1935483870967758, 1341.73, 0.0, 897.4301204819278],
-        "validated_cost": 2055.000787822143,
-        "validated_num_routes": 10
+        "route_durations": [253.8464705882352, 60.34999999999991, 110.24285451100116, 129.2178964492524, 272.95153024752994, 59.53551566080977, 48.59916839916838, 143.47000000000003, 185.9853590772086, 128.51999999999975, 133.11521739130433, 180.51467938526764, 49.52999999999997, 165.02746800069002, 74.32400370713606],
+        "route_departure_times": [1044.4235294117645, 1065.0, 814.9774844720497, 274.3243243243243, 438.36922799422814, 28.27058823529412, 372.1846153846154, 1282.9199999999998, 666.46106949422, 1343.2, 0.0, 273.40423953365126, 1211.43, 23.32941176470588, 900.0],
+        "authors": "Florian Rascoussier (0nyr)",
+        "validated_cost": 1995.2301634176033,
+        "validated_num_routes": 15,
+        "date": "2026-07-13T14:09:28",
+        "optimality": {
+            "proven": true,
+            "prover": "kayros lera branch-price-and-cut (HiGHS backend; branch m5.9-exact-stepwise-labeling, commit 272e77e)",
+            "certificate": "Optimal under checker-exact route costs and standard LP/pricing tolerances. Certified by four independent solves (cold and warm starts x asymmetric and symmetric labeling modes) agreeing on the value, each with an audited exact-pricing phase and zero checker-infeasible priced columns.",
+            "date": "2026-07-13",
+            "arithmetic": "checker-exact route costs (IEEE-754 doubles, canonical route order); the proven optimum equals compute_solution_cost of the stored routes bit-exactly",
+            "proven_optimum": 1995.2301634176033,
+            "dual_bound": 1995.230163417603,
+            "wall_time_s": 7.4,
+            "time_limit_s": 7200.0,
+            "checker": "mamut-routing-lib td Duration checker",
+            "campaign": "2026-07-11/12 weekend TD re-certification top-up on Grid'5000 (reservations 6767852 + 6767861)"
+        }
     },
     "objective_function": "Duration"
 }
