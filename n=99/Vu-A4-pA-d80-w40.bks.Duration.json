@@ -23,14 +23,14 @@
         [86, 58, 39, 54],
         [97, 24, 94, 92, 45]
     ],
-    "cost": 1260.5929740113056,
+    "cost": 1260.592974011306,
     "metadata": {
         "source": "kayros lera BPC exact solve (HiGHS backend) \u2014 four independent runs (cold/warm starts x two labeling modes) agreeing on the value, each with exact-pricing iterations audited; recorded as a best-known solution (optimality stamping is handled separately)",
         "validated_by": "mamut-routing-lib td Duration checker",
-        "route_durations": [100.39093898428939, 146.66907652068943, 36.289999999999964, 63.510170777988606, 26.855509355509298, 97.5803003475636, 46.07489299253996, 5.607142857142776, 17.156626506024097, 19.823529411764696, 93.29000000000042, 82.70686813186813, 119.4831932773109, 38.39514247466056, 29.760604085180148, 45.00841872232763, 51.55153949129863, 66.83000000000015, 79.00000000000023, 43.67142857142835, 50.937591503718664],
-        "route_departure_times": [689.8823529411765, 457.4594594594594, 1218.33, 1044.4698292220114, 694.5675675675676, 811.6504688832056, 396.33846153846156, 849.3928571428572, 102.8433734939759, 300.0, 1329.31, 307.3392857142857, 138.92857142857142, 79.960413080895, 889.798717948718, 1.3763440860215057, 960.0, 1272.54, 1126.7199999999998, 604.0923076923077, 10.13469765290785],
+        "route_durations": [100.39093898428939, 146.66907652068943, 36.289999999999964, 63.510170777988606, 26.855509355509298, 97.5803003475636, 46.074892992540015, 5.60714285714289, 17.156626506024097, 19.823529411764696, 93.29000000000042, 82.70686813186813, 119.4831932773109, 38.39514247466056, 29.760604085180262, 45.00841872232763, 51.55153949129863, 66.83000000000015, 79.00000000000023, 43.67142857142835, 50.93759150371865],
+        "route_departure_times": [689.8823529411765, 457.4594594594594, 1218.33, 1044.4698292220114, 694.5675675675676, 811.6504688832056, 396.33846153846156, 840.0, 102.8433734939759, 300.0, 1329.31, 307.3392857142857, 138.92857142857142, 79.960413080895, 889.798717948718, 1.376344086021506, 960.0, 1272.54, 1126.7199999999998, 604.0923076923077, 10.13469765290785],
         "authors": "Florian Rascoussier (0nyr)",
-        "validated_cost": 1260.5929740113056,
+        "validated_cost": 1260.592974011306,
         "validated_num_routes": 21,
         "date": "2026-07-10T20:49:56",
         "optimality": {
@@ -39,12 +39,19 @@
             "certificate": "Optimal under checker-exact route costs and standard LP/pricing tolerances. Certified by four independent solves (cold and warm starts x asymmetric and symmetric labeling modes) agreeing on the value, each with an audited exact-pricing phase and zero checker-infeasible priced columns.",
             "date": "2026-08-06",
             "arithmetic": "checker-exact route costs (IEEE-754 doubles, canonical route order); the proven optimum equals compute_solution_cost of the stored routes bit-exactly",
-            "proven_optimum": 1260.5929740113056,
+            "proven_optimum": 1260.592974011306,
             "dual_bound": 1260.5929740113056,
             "wall_time_s": 11.86,
             "time_limit_s": 7200.0,
             "checker": "mamut-routing-lib td Duration checker",
-            "campaign": "2026-08-06 full TD re-certification on Grid'5000 abaca (job 6830467 + memory retry 6830998)"
+            "campaign": "2026-08-06 full TD re-certification on Grid'5000 abaca (job 6830467 + memory retry 6830998)",
+            "note": "Re-priced on 2026-09-24 from 1260.5929740113056 to 1260.592974011306 by mamut-routing-lib td checker, contract td-fold/2 (lib >= 0.12.0) (exact vertex ready-time transforms and slope-one arc interpolation). Routes unchanged. The proof was obtained under the pre-0.12 fold (td-fold/1); dual_bound is the prover's value under that arithmetic. Re-certification under td-fold/2 is pending."
+        },
+        "repriced": {
+            "previous_cost": 1260.5929740113056,
+            "checker": "mamut-routing-lib td checker, contract td-fold/2 (lib >= 0.12.0)",
+            "contract": "td-fold/2",
+            "date": "2026-09-24"
         }
     },
     "objective_function": "Duration"

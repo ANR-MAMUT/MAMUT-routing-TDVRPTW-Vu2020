@@ -21,14 +21,14 @@
         [74, 25],
         [78, 26, 17, 7]
     ],
-    "cost": 2292.4875478246563,
+    "cost": 2292.487547824656,
     "metadata": {
         "source": "kayros lera BPC exact solve (HiGHS backend) \u2014 four independent runs (cold/warm starts x two labeling modes) agreeing on the value, each with exact-pricing iterations audited; recorded as a best-known solution (optimality stamping is handled separately)",
         "validated_by": "mamut-routing-lib td Duration checker",
-        "route_durations": [95.68000000000006, 245.88462365591408, 163.76960390754738, 108.18834490317863, 163.61635568194276, 103.28999999999996, 105.1760059171599, 119.87255249494336, 143.31999999999994, 92.12388914338067, 174.78889726828004, 42.46428571428572, 31.029999999999973, 172.80714285714294, 125.51999999999975, 123.46818181818182, 107.12575970079476, 71.5119047619047, 102.84999999999991],
-        "route_departure_times": [1065.0, 1059.505376344086, 41.852845072044445, 676.6470588235294, 980.5844155844155, 1537.26, 370.64899408284026, 393.08597285067873, 1467.65, 624.0261108566193, 490.84623786685506, 309.23214285714283, 1267.97, 845.8928571428571, 1304.93, 228.84848484848484, 43.56989247311828, 807.452380952381, 1325.69],
+        "route_durations": [95.68000000000006, 245.88462365591408, 163.76960390754738, 108.18834490317863, 163.61635568194265, 103.28999999999996, 105.17600591715984, 119.87255249494336, 143.31999999999994, 92.12388914338067, 174.78889726828004, 42.46428571428572, 31.029999999999973, 172.80714285714294, 125.51999999999975, 123.46818181818182, 107.12575970079476, 71.5119047619047, 102.84999999999991],
+        "route_departure_times": [1065.0, 1059.505376344086, 41.852845072044445, 676.6470588235294, 980.5844155844156, 1537.26, 370.64899408284026, 393.08597285067873, 1467.65, 624.0261108566193, 490.84623786685506, 309.23214285714283, 1267.97, 845.8928571428571, 1304.93, 228.84848484848484, 43.56989247311828, 807.452380952381, 1325.69],
         "authors": "Florian Rascoussier (0nyr)",
-        "validated_cost": 2292.4875478246563,
+        "validated_cost": 2292.487547824656,
         "validated_num_routes": 19,
         "date": "2026-07-10T20:47:59",
         "optimality": {
@@ -37,12 +37,19 @@
             "certificate": "Optimal under checker-exact route costs and standard LP/pricing tolerances. Certified by four independent solves (cold and warm starts x asymmetric and symmetric labeling modes) agreeing on the value, each with an audited exact-pricing phase and zero checker-infeasible priced columns.",
             "date": "2026-08-06",
             "arithmetic": "checker-exact route costs (IEEE-754 doubles, canonical route order); the proven optimum equals compute_solution_cost of the stored routes bit-exactly",
-            "proven_optimum": 2292.4875478246563,
+            "proven_optimum": 2292.487547824656,
             "dual_bound": 2292.4875478246563,
             "wall_time_s": 7.52,
             "time_limit_s": 7200.0,
             "checker": "mamut-routing-lib td Duration checker",
-            "campaign": "2026-08-06 full TD re-certification on Grid'5000 abaca (job 6830467 + memory retry 6830998)"
+            "campaign": "2026-08-06 full TD re-certification on Grid'5000 abaca (job 6830467 + memory retry 6830998)",
+            "note": "Re-priced on 2026-09-24 from 2292.4875478246563 to 2292.487547824656 by mamut-routing-lib td checker, contract td-fold/2 (lib >= 0.12.0) (exact vertex ready-time transforms and slope-one arc interpolation). Routes unchanged. The proof was obtained under the pre-0.12 fold (td-fold/1); dual_bound is the prover's value under that arithmetic. Re-certification under td-fold/2 is pending."
+        },
+        "repriced": {
+            "previous_cost": 2292.4875478246563,
+            "checker": "mamut-routing-lib td checker, contract td-fold/2 (lib >= 0.12.0)",
+            "contract": "td-fold/2",
+            "date": "2026-09-24"
         }
     },
     "objective_function": "Duration"

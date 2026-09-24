@@ -23,14 +23,14 @@
         [96, 50],
         [97, 29, 47, 31, 38]
     ],
-    "cost": 1561.7330469857222,
+    "cost": 1561.733046985723,
     "metadata": {
         "source": "kayros lera BPC exact solve (HiGHS backend) \u2014 four independent runs (cold/warm starts x two labeling modes) agreeing on the value, each with exact-pricing iterations audited; recorded as a best-known solution (optimality stamping is handled separately)",
         "validated_by": "mamut-routing-lib td Duration checker",
-        "route_durations": [53.460000000000036, 80.61999999999989, 80.01687427268064, 104.56203266062835, 29.059999999999945, 29.62554112554119, 131.1926420992125, 77.94135593220335, 64.02292286027225, 20.638461538461513, 97.38144149967684, 97.4604633204633, 38.92166138945811, 63.362863217576184, 50.399999999999864, 71.43000000000006, 110.27936790691027, 97.75999999999999, 77.56296111665006, 49.82738095238085, 136.2070770936073],
-        "route_departure_times": [1252.79, 1260.63, 989.9262440068893, 926.7760104302477, 1162.72, 525.969696969697, 309.95441672431684, 839.9399999999999, 55.97707713972775, 398.26153846153846, 585.5, 562.9314285714286, 740.3069100391134, 0.0, 1281.94, 1093.45, 0.8640664365240835, 1131.4599999999998, 685.2370388833499, 845.9642857142857, 159.96792290639277],
+        "route_durations": [53.460000000000036, 80.61999999999989, 80.01687427268075, 104.56203266062835, 29.059999999999945, 29.62554112554119, 131.19264209921255, 77.94135593220335, 64.02292286027226, 20.638461538461513, 97.38144149967684, 97.4604633204633, 38.92166138945811, 63.362863217576184, 50.399999999999864, 71.43000000000006, 110.27936790691025, 97.75999999999999, 77.56296111665006, 49.82738095238096, 136.2070770936073],
+        "route_departure_times": [1252.79, 1260.63, 989.9262440068892, 926.7760104302477, 1162.72, 525.969696969697, 309.95441672431684, 839.9399999999999, 55.97707713972774, 398.26153846153846, 585.5, 562.9314285714286, 740.3069100391134, 0.0, 1281.94, 1093.45, 0.8640664365240833, 1131.4599999999998, 685.2370388833499, 842.9642857142857, 159.96792290639277],
         "authors": "Florian Rascoussier (0nyr)",
-        "validated_cost": 1561.7330469857222,
+        "validated_cost": 1561.733046985723,
         "validated_num_routes": 21,
         "date": "2026-07-10T20:49:27",
         "optimality": {
@@ -39,12 +39,19 @@
             "certificate": "Optimal under checker-exact route costs and standard LP/pricing tolerances. Certified by four independent solves (cold and warm starts x asymmetric and symmetric labeling modes) agreeing on the value, each with an audited exact-pricing phase and zero checker-infeasible priced columns.",
             "date": "2026-08-06",
             "arithmetic": "checker-exact route costs (IEEE-754 doubles, canonical route order); the proven optimum equals compute_solution_cost of the stored routes bit-exactly",
-            "proven_optimum": 1561.7330469857222,
+            "proven_optimum": 1561.733046985723,
             "dual_bound": 1561.733046985722,
             "wall_time_s": 22.79,
             "time_limit_s": 7200.0,
             "checker": "mamut-routing-lib td Duration checker",
-            "campaign": "2026-08-06 full TD re-certification on Grid'5000 abaca (job 6830467 + memory retry 6830998)"
+            "campaign": "2026-08-06 full TD re-certification on Grid'5000 abaca (job 6830467 + memory retry 6830998)",
+            "note": "Re-priced on 2026-09-24 from 1561.7330469857222 to 1561.733046985723 by mamut-routing-lib td checker, contract td-fold/2 (lib >= 0.12.0) (exact vertex ready-time transforms and slope-one arc interpolation). Routes unchanged. The proof was obtained under the pre-0.12 fold (td-fold/1); dual_bound is the prover's value under that arithmetic. Re-certification under td-fold/2 is pending."
+        },
+        "repriced": {
+            "previous_cost": 1561.7330469857222,
+            "checker": "mamut-routing-lib td checker, contract td-fold/2 (lib >= 0.12.0)",
+            "contract": "td-fold/2",
+            "date": "2026-09-24"
         }
     },
     "objective_function": "Duration"
